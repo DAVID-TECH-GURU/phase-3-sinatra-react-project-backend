@@ -1,52 +1,56 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# A DSL for quickly creating web applications
-# https://github.com/sinatra/sinatra
-gem "sinatra", "~> 2.1"
+ruby "3.0.0"
 
-# A fast and simple web server
-# https://github.com/macournoyer/thin
-gem "thin", "~> 1.8"
-
-# Rack middleware. Used specifically for parsing the request body into params.
-# https://github.com/rack/rack-contrib
-gem "rack-contrib", "~> 2.3"
-
-# More Rack middleware! Used to handle CORS requests
-# https://github.com/cyu/rack-cors
-gem "rack-cors", "~> 1.1"
-
-# An object-relational mapper
-# https://guides.rubyonrails.org/active_record_basics.html
-gem "activerecord", "~> 6.1"
-
-# Configures common Rake tasks for working with Active Record
-# https://github.com/sinatra-activerecord/sinatra-activerecord
-gem "sinatra-activerecord", "~> 2.0"
-
-# Run common tasks from the command line
-# https://github.com/ruby/rake
-gem "rake", "~> 13.0"
-
-# Provides functionality to interact with a SQLite3 database
-gem "sqlite3", "~> 1.4"
-
-# Require all files in a folder
-gem "require_all", "~> 3.0"
-
-# These gems will only be used when we are running the application locally
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
+gem 'rails', '~> 6.1.4.4'
+gem 'railties', '>= 6.0.0'
+# Use postgresql as the database for Active Record
+gem 'pg', '~> 1.1'
+# Use Puma as the app server
+gem 'puma', '~> 5.0'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+# gem 'jbuilder', '~> 2.7'
+# Use Redis adapter to run Action Cable in production
+gem 'redis', '~> 4.0'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+# Use Active Model has_secure_password
+gem 'bcrypt', '~> 3.1.7'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem "pundit", require: true
+# Use Active Storage variant
+# gem 'image_processing', '~> 1.2'
+# gem 'aws-sdk','~>3'
+# Reduces boot times through caching; required in config/boot.rb
+# gem 'bootsnap', '>= 1.4.4', require: false
+gem 'bootsnap', '~> 1.10', '>= 1.10.3',require: false
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+# gem 'rack-cors'
+gem 'rack-cors', require: 'rack/cors'
+gem 'rack'
+gem 'devise'
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+gem "rolify"
 group :development do
-  gem "pry", "~> 0.14.1"
-
-  # Automatically reload when there are changes
-  # https://github.com/alexch/rerun
-  gem "rerun"
+  gem 'listen', '~> 3.3'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
 end
 
-# These gems will only be used when we are running tests
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :development, :test do
+  gem 'rspec-rails', '~> 5.0.0'
+end
+
 group :test do
-  gem "database_cleaner", "~> 2.0"
-  gem "rack-test", "~> 1.1"
-  gem "rspec", "~> 3.10"
-  gem "rspec-json_expectations", "~> 2.2"
+  gem 'rspec-json_expectations'
+  gem 'shoulda-matchers', '~> 4.0'
 end
+
+gem "active_model_serializers", "~> 0.10.12"
