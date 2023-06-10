@@ -23,14 +23,12 @@ This project aims to provide a user-friendly and feature-rich online shopping ex
 - React.js
 
 ## Installation
-1. Clone the repository: https://github.com/DAVID-TECH-GURU/phase-3-project-frontend.git
+1. Clone the repository: https://github.com/DAVID-TECH-GURU/phase-3-sinatra-react-project-backend.git
 2. Navigate to the project directory: `cd phase-3-project-frontend`
 3. Install dependencies: `npm install` or `yarn install`
 
-## BACKEND CODE AND ACCESS
-
-
-
+## FRONTEND CODE LINK AND ACCESS
+https://github.com/DAVID-TECH-GURU/phase-3-project-frontend.git
 
 # Setup
 
