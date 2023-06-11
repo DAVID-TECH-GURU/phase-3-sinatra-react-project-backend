@@ -21,6 +21,8 @@ This project aims to provide a user-friendly and feature-rich online shopping ex
 - Heroku CLI
 - Postgresql
 - React.js
+ 
+DEPLOYED to github pages.
 
 ## Installation
 1. Clone the repository: https://github.com/DAVID-TECH-GURU/phase-3-sinatra-react-project-backend.git
