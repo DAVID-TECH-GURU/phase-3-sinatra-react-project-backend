@@ -21,6 +21,8 @@ This project aims to provide a user-friendly and feature-rich online shopping ex
 - Heroku CLI
 - Postgresql
 - React.js
+ 
+DEPLOYED to github pages.
 
 DEPLOYED to github pages
 
